@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/commands.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="shortcut icon" href="../img/" type="image/x-icon">
+    <title>Claranty</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container">
+            <a href="../index.html" class="navbar-brand text-info">Claranty</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu"><span
+                    class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="mainmenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="linksdrop" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Links</a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="linksdrop">
+                            <li><a class="dropdown-item text-muted" href="https://discord.com/api/oauth2/authorize?client_id=1068380144638636174&permissions=4398042316791&scope=bot%20applications.commands">Invite</a></li>
+                            <li><a class="dropdown-item text-muted" href="https://github.com/ChlleXanDev">Github</a></li>
+                            <li><a class="dropdown-item text-muted" href="https://saweria.co/ChlleXanDev">Support Developer</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <li class="navbar-nav nav-item"><a href="" class="btn btn-outline-info">Login</a></li>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section style="margin-top: 9%;">
+            <div class="row">
+                <div class="col-sm-6 my-1">
+                    <h2 class="fw-bold">Claranty Commands</h2>
+                    <p class="command-descreption">Find all Claranty commands and information you need fast and easy</p>
+                </div>
+                <div class="col-sm-6 my-1">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4050940490843957" crossorigin="anonymous"></script>
+                    <!-- banner -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:100%;height:90px"
+                         data-ad-client="ca-pub-4050940490843957"
+                         data-ad-slot="6770580457"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <div class="mt-4"></div>
+        <div class="row">
+            <div class="col-md-4 my-2">
+                <div class="card p-3">
+                    <h5>Select Commands Category</h5>
+                    <hr />
+                    <button onclick="active(this)" id="CategoryBtnAll" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class="fad fa-icons ttt"></i>&nbsp; All Commands</button>
+                    
+                        <button onclick="active(this)" id="CategoryBtn0" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-gift ttt'></i>&nbsp; Settings Commands</button>
+                    
+                        <button onclick="active(this)" id="CategoryBtn1" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-globe-europe ttt'></i>&nbsp; Store Commands</button>
+                    
+                        <button onclick="active(this)" id="CategoryBtn2" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-hammer-war ttt'></i>&nbsp;&nbsp; Info Commands</button>
+                    
+                    
+                </div>
+            </div>
+            <div class="col-md-8 my-2">
+                <input type="text" class="w-100 search-box" oninput="search(this.value)" placeholder="Search for commands" />
+                
+                    
+                        <div class="mt-4"></div>
+                    
+                    <div class="commands-section" id="Category0">
+                        
+                            
+                        <div class="accordion accordion-flush mt-2" id="f2fa">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ff2fa">
+                                         /2fa&nbsp; <span class="command-descreption">- untuk verification 2fa akun Riot</span>
+                                    </button>
+                                </h2>
+                                <div id="ff2fa" class="accordion-collapse collapse" data-bs-parent="#f2fa">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /2fa 
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="account">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faccount">
+                                         /account&nbsp; <span class="command-descreption">- untuk pindah akses akun</span>
+                                    </button>
+                                </h2>
+                                <div id="faccount" class="accordion-collapse collapse" data-bs-parent="#account">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /account
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="accounts">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faccounts">
+                                         /accounts&nbsp; <span class="command-descreption">- untuk melihat akun riot yang telah anda login kan</span>
+                                    </button>
+                                </h2>
+                                <div id="faccounts" class="accordion-collapse collapse" data-bs-parent="#accounts">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /accounts
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="cookies">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fcookies">
+                                         /cookies&nbsp; <span class="command-descreption">- login akun riot menggunakan cookies</span>
+                                    </button>
+                                </h2>
+                                <div id="fcookies" class="accordion-collapse collapse" data-bs-parent="#cookies">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /cookies
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="forget">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fforget">
+                                         /forget&nbsp; <span class="command-descreption">- untuk melupakan/logout akun riot yang telah terdaftar di database</span>
+                                    </button>
+                                </h2>
+                                <div id="fforget" class="accordion-collapse collapse" data-bs-parent="#forget">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /forget
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="login">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flogin">
+                                         /login&nbsp; <span class="command-descreption">- untuk login akun riot</span>
+                                    </button>
+                                </h2>
+                                <div id="flogin" class="accordion-collapse collapse" data-bs-parent="#login">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /login
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="settingsview">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsettingsview">
+                                         /settings view&nbsp; <span class="command-descreption">- setting tampilan bot</span>
+                                    </button>
+                                </h2>
+                                <div id="fsettingsview" class="accordion-collapse collapse" data-bs-parent="#settingsview">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /settings view
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="settingsset">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsettingsset">
+                                         /settings set&nbsp; <span class="command-descreption">- setting bot</span>
+                                    </button>
+                                </h2>
+                                <div id="fsettingsset" class="accordion-collapse collapse" data-bs-parent="#settingsset">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /settings set
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>
+                
+                    
+                    <div class="commands-section" id="Category1">
+                        
+                            
+                        <div class="accordion accordion-flush mt-2" id="battlepass">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbattlepass">
+                                         /battlepass&nbsp; <span class="command-descreption">- untuk melihat list battlepass</span>
+                                    </button>
+                                </h2>
+                                <div id="fbattlepass" class="accordion-collapse collapse" data-bs-parent="#battlepass">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /battlepass
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="bundle">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbundle">
+                                         /bundle&nbsp; <span class="command-descreption">- untuk melihat bundle skin</span>
+                                    </button>
+                                </h2>
+                                <div id="fbundle" class="accordion-collapse collapse" data-bs-parent="#bundle">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /bundle
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="bundles">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbundles">
+                                         /bundles&nbsp; <span class="command-descreption">- untuk melihat semua bundle skin</span>
+                                    </button>
+                                </h2>
+                                <div id="fbundles" class="accordion-collapse collapse" data-bs-parent="#bundles">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /bundles
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="nightmarket">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fnightmarket">
+                                         /nightmarket&nbsp; <span class="command-descreption">- untuk melihat isi nightmarket di akun anda</span>
+                                    </button>
+                                </h2>
+                                <div id="fnightmarket" class="accordion-collapse collapse" data-bs-parent="#nightmarket">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /nightmarket
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="shop">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fshop">
+                                         /shop&nbsp; <span class="command-descreption">- untuk melihat isi list skin di dalam store anda</span>
+                                    </button>
+                                </h2>
+                                <div id="fshop" class="accordion-collapse collapse" data-bs-parent="#shop">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /shop
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                
+                    
+                    <div class="commands-section" id="Category2">
+                        
+                            
+                        <div class="accordion accordion-flush mt-2" id="alert">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#falert">
+                                         /alert&nbsp; <span class="command-descreption">- untuk memberikan peringatan apabila ada skin yang anda inginkan di dalam store anda</span>
+                                    </button>
+                                </h2>
+                                <div id="falert" class="accordion-collapse collapse" data-bs-parent="#alert">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /alert
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="alerts">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#falerts">
+                                         /alerts&nbsp; <span class="command-descreption">- melihat semua alert anda</span>
+                                    </button>
+                                </h2>
+                                <div id="falerts" class="accordion-collapse collapse" data-bs-parent="#alerts">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /alerts
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="testalert">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ftestalert">
+                                         /testalert&nbsp; <span class="command-descreption">- untuk menguji alert terhadap akun anda</span>
+                                    </button>
+                                </h2>
+                                <div id="ftestalert" class="accordion-collapse collapse" data-bs-parent="#testalert">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /testalert
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="balance">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbalance">
+                                         /balance&nbsp; <span class="command-descreption">- melihat vp/rp di dalam akun anda</span>
+                                    </button>
+                                </h2>
+                                <div id="fbalance" class="accordion-collapse collapse" data-bs-parent="#balance">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /balance
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="collection">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fcollection">
+                                         /collection&nbsp; <span class="command-descreption">- untuk melihat list skin yang anda miliki di dalam collection anda</span>
+                                    </button>
+                                </h2>
+                                <div id="fcollection" class="accordion-collapse collapse" data-bs-parent="#collection">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /collection
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="info">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#finfo">
+                                         /info&nbsp; <span class="command-descreption">- untuk melihat info Claranty bot</span>
+                                    </button>
+                                </h2>
+                                <div id="finfo" class="accordion-collapse collapse" data-bs-parent="#info">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /info
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="stats">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fstats">
+                                         /stats&nbsp; <span class="command-descreption">- untuk melihat stats Claranty bot</span>
+                                    </button>
+                                </h2>
+                                <div id="fstats" class="accordion-collapse collapse" data-bs-parent="#stats">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /stats
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="update">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fupdate">
+                                         /update&nbsp; <span class="command-descreption">- untuk men update information akun anda </span>
+                                    </button>
+                                </h2>
+                                <div id="fupdate" class="accordion-collapse collapse" data-bs-parent="#update">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /update
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion accordion-flush mt-2" id="valstatus">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fvalstatus">
+                                         /valstatus&nbsp; <span class="command-descreption">- untuk melihat apakah bot sedang maintenance atau tidak</span>
+                                    </button>
+                                </h2>
+                                <div id="fvalstatus" class="accordion-collapse collapse" data-bs-parent="#valstatus">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                /valstatus
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+            
+            </div>
+        </div>
+    </div>
+
+        <!-- footer -->
+
+        <div class="footer-clean bg-dark">
+            <footer>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Quick access</h3>
+                            <ul>
+                                <li><a href="#Features">Features</a></li>
+                                <li><a href="#Statics">Statics</a></li>
+                                <li><a href="#FAQ">Ask me</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="./pages/commands.html">Commands</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">License</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Links</h3>
+                            <ul>
+                                <li><a href="https://saweria.co/ChlleXanDev">Support Developer</a></li>
+                                <li><a href="https://discord.com/api/oauth2/authorize?client_id=1068380144638636174&permissions=4398042316791&scope=bot%20applications.commands">Invite bot</a></li>
+                                <li><a href="https://github.com/ChlleXanDev/">Github</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 item social"><a href="#"><ion-icon name="logo-discord"></ion-icon></a><a href="#"><ion-icon name="logo-facebook"></ion-icon></a><a href="#"><ion-icon name="logo-twitter"></ion-icon></a><a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <p class="copyright">Claranty © 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-footer font-small text-light mt-5">
+                <div class="footer-copyright text-center">Made with 💖 by
+                    <a href="https://github.com/ChlleXanDev/">ChlleXanDev</a>
+                    © 2023 Copyright
+                  </div>
+                </div>
+            </footer>
+        </div>
+    
+    <input id="commands" value="[{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-gift ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Settings Commands&#34;,&#34;commands&#34;:[&#34;f2fa&#34;,&#34;account&#34;,&#34;accounts&#34;,&#34;cookies&#34;,&#34;forget&#34;,&#34;login&#34;,&#34;settingsview&#34;,&#34;settingsset&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-globe-europe ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Store Commands&#34;,&#34;commands&#34;:[&#34;battlepass&#34;,&#34;bundle&#34;,&#34;bundles&#34;,&#34;nightmarket&#34;,&#34;shop&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-hammer-war ttt&#39;&gt;&lt;/i&gt;&amp;nbsp;&amp;nbsp; Info Commands&#34;,&#34;commands&#34;:[&#34;alert&#34;,&#34;alerts&#34;,&#34;testalert&#34;,&#34;balance&#34;,&#34;collection&#34;,&#34;info&#34;,&#34;stats&#34;,&#34;update&#34;,&#34;valstatus&#34;]}]" hidden />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/fontawesome/all.min.js"></script>
+    <script src="/js/animation.js"></script>
+    <script>
+        function active(elm){
+            document.getElementById("CategoryBtnAll").classList.remove("active");
+            
+                document.getElementById("CategoryBtn0").classList.remove("active");
+                document.getElementById("Category0").setAttribute("hidden", "");
+            
+                document.getElementById("CategoryBtn1").classList.remove("active");
+                document.getElementById("Category1").setAttribute("hidden", "");
+            
+                document.getElementById("CategoryBtn2").classList.remove("active");
+                document.getElementById("Category2").setAttribute("hidden", "");
+            
+            elm.classList.add("active");
+            if(elm.id.replace("CategoryBtn", "") == "All"){
+                
+                    document.getElementById("Category0").removeAttribute("hidden");
+                
+                    document.getElementById("Category1").removeAttribute("hidden");
+                
+                    document.getElementById("Category2").removeAttribute("hidden");
+                
+            }else{
+                document.getElementById("Category" + elm.id.replace("CategoryBtn", "")).removeAttribute("hidden");
+            }
+        }
+        document.getElementById("CategoryBtnAll").click();
+        function search(arg){
+            let commands = JSON.parse(document.getElementById("commands").value);
+            let cmds = [];
+            commands.forEach(category => {
+                category.commands.forEach(command => {
+                    cmds.push(command);
+                })
+            })
+            let existedCmds = cmds.filter(obj => obj.includes(arg.toLowerCase()));
+            cmds.forEach(cmd => {
+                document.getElementById(cmd).setAttribute("hidden", "");
+            })
+            existedCmds.forEach(cmd => {
+                document.getElementById(cmd).removeAttribute("hidden");
+            })
+        }
+    </script>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
